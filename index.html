@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | GitHub user search app</title>
+  <meta charset="UTF-8" />
+  <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Hack to import a favicon from another, already live website -->
+  <link rel="icon" type="image/png" href="https://www.google.com/s2/favicons?domain=juanca.org" />
+  <link rel="stylesheet" href="./style.css" />
+  <!-- The 'defer' boolean attribute is set to indicate to the browser that the script is meant to be executed after the document has been parsed -->
+  <script defer src="./script.js"></script>
+  <title>GitHub User Search | juanca.dev</title>
 </head>
+
 <body>
+  <header class="devfinder__header">
+    <a href="#" class="devfinder__logo">devfinder</a>
+    <a href="#" class="devfinder__theme">dark</a>
+  </header>
 
-  devfinder
+  <main class="devfinder__main">
+    <div class="devfinder__search">
+      <input type="search" name="search" id="devfinder__search-input" placeholder="Search GitHub username..." />
+      <input type="submit" value="Search" id="devfinder__search-submit" />
+    </div>
 
-  Light
-  Dark
+    <div class="devfinder__result">
+      <h1 class="devfinder__result-name">The Octocat</h1>
+      <p class="devfinder__result-username">@octocat</p>
+      <p class="devfinder__result-joined">Joined <span class="devfinder__result-date">25 Jan 2011</span></p>
+      <p class="devfinder__result-description">Lorem ipsum dolor sit amet. consectetuer adipiscing elit. Donec odio.
+        Quisque volutpat mattis eros.</p>
+      <ul class="devfinder__result-stats">
+        <li><span class="devfinder__result-stats--title">Repos</span> 8</li>
+        <li><span class="devfinder__result-stats--title">Followers</span> 3938</li>
+        <li><span class="devfinder__result-stats--title">Following</span> 9</li>
+      </ul>
+      <ul class="devfinder__result-data">
+        <li class="devfinder__result-data--location">San Francisco</li>
+        <li class="devfinder__result-data--website"><a href="#">https://github.blog</a></li>
+        <li class="devfinder__result-data--twitter">Not Available</li>
+        <li class="devfinder__result-data--company">@github</li>
+      </ul>
+    </div>
+  </main>
 
-  Search GitHub username...
-  Search
-
-  Joined
-
-  Repos
-  Followers
-  Following
-
+  <footer class="attribution">
+    Challenge by
+    <a href="https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6" rel="noopener"
+      target="_blank">Frontend Mentor</a>. Coded by
+    <a href="https://www.juanca.org" rel="noopener" target="_blank">@juancaorg</a>.
+  </footer>
 </body>
+
 </html>
