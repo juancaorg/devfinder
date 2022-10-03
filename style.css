@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
 /*
  * Use a more-intuitive box-sizing model.
 */
@@ -17,6 +19,8 @@
   --bold-typography-color: hsl(217, 21%, 21%);
   --background-color: hsl(227, 100%, 98%);
   --card-background-color: hsl(0, 0%, 100%);
+  --link-color: hsl(217, 20%, 51%);
+  --attribution-color: hsl(212, 95%, 48%);
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -27,10 +31,46 @@
     --bold-typography-color: hsl(0, 0%, 100%);
     --background-color: hsl(220, 40%, 13%);
     --card-background-color: hsl(222, 41%, 20%);
+    --link-color: hsl(0, 0%, 100%);
+    --attribution-color: hsl(212, 95%, 48%);
   }
 }
 
 body {
+  min-height: 100vh;
   background-color: var(--background-color);
   color: var(--typography-color);
+  font-weight: 400;
+  font-family: "Space Mono", monospace;
+  display: flex;
+  flex-direction: column;
+}
+
+body a {
+  color: var(--link-color);
+  text-decoration-line: none;
+}
+
+body a:hover {
+  text-decoration-line: underline;
+}
+
+.main {
+  margin: auto;
+}
+
+.main__result {
+  max-width: 327px;
+  background-color: var(--card-background-color);
+  border-radius: 0.9375rem;
+}
+
+.footer__attribution {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.footer__attribution a:hover {
+  color: var(--attribution-color);
 }
