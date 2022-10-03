@@ -23,18 +23,6 @@
   --attribution-color: hsl(212, 95%, 48%);
 }
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --accent-color: hsl(212, 100%, 50%);
-    --typography-color: hsl(0, 0%, 100%);
-    --icon-color: hsl(0, 0%, 100%);
-    --bold-typography-color: hsl(0, 0%, 100%);
-    --background-color: hsl(220, 40%, 13%);
-    --card-background-color: hsl(222, 41%, 20%);
-    --link-color: hsl(0, 0%, 100%);
-    --attribution-color: hsl(212, 95%, 48%);
-  }
-}
 
 body {
   min-height: 100vh;
@@ -63,6 +51,7 @@ body a:hover {
   max-width: 327px;
   background-color: var(--card-background-color);
   border-radius: 0.9375rem;
+  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
 }
 
 .footer__attribution {
@@ -73,4 +62,21 @@ body a:hover {
 
 .footer__attribution a:hover {
   color: var(--attribution-color);
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: hsl(212, 100%, 50%);
+    --typography-color: hsl(0, 0%, 100%);
+    --icon-color: hsl(0, 0%, 100%);
+    --bold-typography-color: hsl(0, 0%, 100%);
+    --background-color: hsl(220, 40%, 13%);
+    --card-background-color: hsl(222, 41%, 20%);
+    --link-color: hsl(0, 0%, 100%);
+    --attribution-color: hsl(212, 95%, 48%);
+  }
+
+  .main__result {
+    box-shadow: unset;
+  }
 }
