@@ -52,6 +52,45 @@ body a:hover {
   background-color: var(--card-background-color);
   border-radius: 0.9375rem;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  padding: 2rem 1.5rem 3rem;
+}
+
+.main__result--profile-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.main__result--pfp {
+  border-radius: 50%;
+  width: 4.375rem;
+}
+
+.main__result--name-container {
+  margin-left: 1.1875rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__result--name {
+  color: var(--bold-typography-color);
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.main__result--username {
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
+  margin-bottom: 0.375rem;
+}
+
+.main__result--joined {
+  color: var(--typography-color);
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
 }
 
 .footer__attribution {
