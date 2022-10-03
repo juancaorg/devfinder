@@ -13,7 +13,7 @@
 :root {
   --accent-color: hsl(212, 100%, 50%);
   --typography-color: hsl(217, 20%, 51%);
-  --icons-color: hsl(217, 35%, 45%);
+  --icon-color: hsl(217, 35%, 45%);
   --bold-typography-color: hsl(217, 21%, 21%);
   --background-color: hsl(227, 100%, 98%);
   --card-background-color: hsl(0, 0%, 100%);
@@ -23,7 +23,7 @@
   :root {
     --accent-color: hsl(212, 100%, 50%);
     --typography-color: hsl(0, 0%, 100%);
-    --icons-color: hsl(0, 0%, 100%);
+    --icon-color: hsl(0, 0%, 100%);
     --bold-typography-color: hsl(0, 0%, 100%);
     --background-color: hsl(220, 40%, 13%);
     --card-background-color: hsl(222, 41%, 20%);
