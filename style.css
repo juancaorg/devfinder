@@ -93,6 +93,14 @@ body a:hover {
   line-height: 1.1875rem;
 }
 
+.main__result--description {
+  font-weight: 400;
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
+  margin-top: 2.0625rem;
+  margin-bottom: 1.4375rem;
+}
+
 .footer__attribution {
   margin-bottom: 1rem;
   font-size: 0.875rem;
