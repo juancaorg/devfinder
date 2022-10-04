@@ -59,6 +59,8 @@ body a:hover {
   color: var(--typography-color);
   font-weight: 400;
   font-family: "Space Mono", monospace;
+  font-size: 0.8125rem;
+  line-height: 1.5625rem;
   padding: 1.125rem;
 }
 
@@ -76,6 +78,10 @@ body a:hover {
    * https://stackoverflow.com/questions/19621306/css-placeholder-text-color-on-firefox
   */
   opacity: 1;
+}
+
+#main__search--input:hover {
+  cursor: text;
 }
 
 #main__search--input:focus {
