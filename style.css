@@ -14,6 +14,7 @@
 
 :root {
   --accent-color: hsl(212, 100%, 50%);
+  --accent-active-color: hsl(212, 100%, 69%);
   --typography-color: hsl(217, 20%, 51%);
   --icon-color: hsl(217, 35%, 45%);
   /* Convert --icon-color to --icon-filter-color. */
@@ -86,6 +87,27 @@ body a:hover {
 
 #main__search--input:focus {
   outline: 2px solid var(--accent-color);
+}
+
+#main__search--submit {
+  background-color: var(--accent-color);
+  border-radius: 0.625rem;
+  color: white;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  font-size: 0.875rem;
+  line-height: 1.3125rem;
+  padding: 0.78125rem 1rem;
+  text-align: center;
+}
+
+#main__search--submit:hover {
+  background-color: var(--accent-active-color);
+  cursor: pointer;
+}
+
+#main__search--submit:active {
+  transform: translateY(2px);
 }
 
 .main__result {
@@ -199,6 +221,7 @@ body a:hover {
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --accent-color: hsl(212, 100%, 50%);
+    --accent-active-color: hsl(212, 100%, 69%);
     --typography-color: hsl(0, 0%, 100%);
     --icon-color: hsl(0, 0%, 100%);
     /* Convert --icon-color to --icon-filter-color. */
