@@ -46,6 +46,19 @@ body a:hover {
   text-decoration-line: underline;
 }
 
+.header__logo {
+  color: var(--bold-typography-color);
+  font-weight: 700;
+  font-size: 1.625rem;
+  line-height: 2.4375rem;
+}
+
+.header__logo:hover {
+  cursor: pointer;
+  color: var(--accent-color);
+  text-decoration-line: none;
+}
+
 .main {
   margin: auto;
 }
