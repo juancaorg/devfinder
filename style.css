@@ -16,6 +16,8 @@
   --accent-color: hsl(212, 100%, 50%);
   --typography-color: hsl(217, 20%, 51%);
   --icon-color: hsl(217, 35%, 45%);
+  /* Convert --icon-color to --icon-filter-color. */
+  --icon-filter-color: invert(43%) sepia(46%) saturate(518%) hue-rotate(178deg) brightness(82%) contrast(88%);
   --bold-typography-color: hsl(217, 21%, 21%);
   --background-color: hsl(227, 100%, 98%);
   --card-background-color: hsl(0, 0%, 100%);
@@ -126,6 +128,14 @@ body a:hover {
   flex-direction: column;
 }
 
+.main__result--data {
+  list-style: none;
+}
+
+.main__result--data li>img {
+  filter: var(--icon-filter-color);
+}
+
 .footer__attribution {
   margin-bottom: 1rem;
   font-size: 0.875rem;
@@ -141,6 +151,8 @@ body a:hover {
     --accent-color: hsl(212, 100%, 50%);
     --typography-color: hsl(0, 0%, 100%);
     --icon-color: hsl(0, 0%, 100%);
+    /* Convert --icon-color to --icon-filter-color. */
+    --icon-filter-color: brightness(0) invert(1);
     --bold-typography-color: hsl(0, 0%, 100%);
     --background-color: hsl(220, 40%, 13%);
     --card-background-color: hsl(222, 41%, 20%);
