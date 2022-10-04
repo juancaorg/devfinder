@@ -36,6 +36,8 @@ body {
   font-family: "Space Mono", monospace;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 body a {
@@ -45,6 +47,12 @@ body a {
 
 body a:hover {
   text-decoration-line: underline;
+}
+
+.header {
+  max-width: 327px;
+  display: flex;
+  column-gap: 7.5rem;
 }
 
 .header__logo {
@@ -76,8 +84,16 @@ body a:hover {
   filter: var(--accent-filter-color);
 }
 
-.main {
-  margin: auto;
+.main__search {
+  margin-top: 2.25rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.main__search>img {
+  position: absolute;
+  top: 18px;
+  left: 16px;
 }
 
 #main__search--input {
@@ -92,7 +108,7 @@ body a:hover {
   font-family: "Space Mono", monospace;
   font-size: 0.8125rem;
   line-height: 1.5625rem;
-  padding: 1.125rem;
+  padding: 1.125rem 6.5rem 1.125rem 3rem;
 }
 
 #main__search--input::placeholder {
@@ -129,6 +145,9 @@ body a:hover {
   line-height: 1.3125rem;
   padding: 0.78125rem 1rem;
   text-align: center;
+  position: absolute;
+  top: 7px;
+  right: 10px;
 }
 
 #main__search--submit:hover {
@@ -146,6 +165,7 @@ body a:hover {
   border-radius: 0.9375rem;
   box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
   padding: 2rem 1.5rem 3rem;
+  margin-bottom: 2rem;
 }
 
 .main__result--profile-container {
