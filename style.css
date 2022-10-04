@@ -51,8 +51,10 @@ body a:hover {
 
 /* 
  * Input submit styling doesn't work
- * in Safari by default, this should fix it.
- * Credit: https: //stackoverflow.com/questions/1681826/css-safari-on-mac-doesnt-adhere-to-my-submit-button-style#17701452
+ * in Safari iOS by default, this should fix it.
+ * Credit: https://stackoverflow.com/questions/1681826/css-safari-on-mac-doesnt-adhere-to-my-submit-button-style#17701452
+ * This question was asked 13 years ago and Apple 🍎
+ * hasn't fixed this yet, bruh 💀.
 */
 
 input {
