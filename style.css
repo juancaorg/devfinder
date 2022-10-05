@@ -355,4 +355,28 @@ input {
     padding: 2.5rem;
     margin-bottom: 8rem;
   }
+
+  .main__result--pfp {
+    width: 7.3125rem;
+  }
+
+  .main__result--name-container {
+    margin-top: 0.75rem;
+    margin-left: 2.5625rem;
+  }
+
+  .main__result--name {
+    font-size: 1.625rem;
+    line-height: 2.4375rem;
+  }
+
+  .main__result--username {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .main__result--joined {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
 }
