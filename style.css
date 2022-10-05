@@ -261,7 +261,7 @@ input {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  row-gap: 1rem;
 }
 
 .main__result--data li>img {
