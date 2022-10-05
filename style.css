@@ -412,3 +412,10 @@ input {
     margin-bottom: 1rem;
   }
 }
+
+@media screen and (min-width: 1270px) {
+  .header {
+    max-width: 730px;
+    column-gap: 32.0625rem;
+  }
+}
