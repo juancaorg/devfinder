@@ -123,7 +123,7 @@ input {
   color: var(--typography-color);
   font-weight: 400;
   font-family: "Space Mono", monospace;
-  font-size: 0.8125rem;
+  font-size: 0.875rem;
   line-height: 1.5625rem;
   padding: 1.125rem 6.5rem 1.125rem 3rem;
 }
