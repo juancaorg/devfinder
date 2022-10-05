@@ -310,3 +310,11 @@ input {
     box-shadow: unset;
   }
 }
+
+@media screen and (min-width: 768px) {
+  .header {
+    max-width: 573px;
+    display: flex;
+    column-gap: 22.9375rem;
+  }
+}
