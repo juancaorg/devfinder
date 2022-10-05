@@ -426,4 +426,15 @@ input {
   .main__result {
     padding: 3rem;
   }
+
+  .main__result--name-container {
+    margin-top: unset;
+    display: block;
+    column-count: 2;
+  }
+
+  .main__result--joined {
+    margin-top: 2rem;
+    margin-left: 4rem;
+  }
 }
