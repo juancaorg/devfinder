@@ -434,7 +434,9 @@ input {
   }
 
   .main__result--joined {
+    /* Separate from the username. */
     margin-top: 2rem;
+    /* Separate from left to right. */
     margin-left: 4rem;
   }
 }
