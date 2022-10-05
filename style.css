@@ -400,4 +400,16 @@ input {
     font-size: 0.8125rem;
     line-height: 1.1875rem;
   }
+
+  .main__result--data {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    display: block;
+    column-count: 2;
+    column-gap: 3.5rem;
+  }
+
+  .main__result--data li:nth-child(odd) {
+    margin-bottom: 1rem;
+  }
 }
