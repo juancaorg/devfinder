@@ -418,4 +418,12 @@ input {
     max-width: 730px;
     column-gap: 32.0625rem;
   }
+
+  .main {
+    max-width: 730px;
+  }
+
+  .main__result {
+    padding: 3rem;
+  }
 }
