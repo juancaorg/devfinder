@@ -14,8 +14,8 @@
 
 :root {
   --accent-color: hsl(212, 100%, 50%);
-  --accent-filter-color: invert(38%) sepia(69%) saturate(6398%) hue-rotate(205deg) brightness(107%) contrast(105%);
   --accent-active-color: hsl(212, 100%, 69%);
+  --theme-hover-filter-color: brightness(0);
   --typography-color: hsl(217, 20%, 51%);
   --icon-color: hsl(217, 35%, 45%);
   /* Convert --icon-color to --icon-filter-color. */
@@ -95,7 +95,7 @@ input {
 
 .header__theme:hover {
   cursor: pointer;
-  filter: var(--accent-filter-color);
+  filter: var(--theme-hover-filter-color);
 }
 
 .main {
@@ -289,8 +289,8 @@ input {
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --accent-color: hsl(212, 100%, 50%);
-    --accent-filter-color: invert(38%) sepia(69%) saturate(6398%) hue-rotate(205deg) brightness(107%) contrast(105%);
     --accent-active-color: hsl(212, 100%, 69%);
+    --theme-hover-filter-color: invert(43%) sepia(46%) saturate(518%) hue-rotate(178deg) brightness(82%) contrast(88%);
     --typography-color: hsl(0, 0%, 100%);
     --icon-color: hsl(0, 0%, 100%);
     /* Convert --icon-color to --icon-filter-color. */
