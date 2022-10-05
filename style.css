@@ -439,4 +439,18 @@ input {
     /* Separate from left to right. */
     margin-left: 4rem;
   }
+
+  .main__result--description {
+    margin-top: -2rem;
+    margin-left: 10rem;
+  }
+
+  .main__result--stats {
+    margin-left: 10rem;
+  }
+
+  .main__result--data {
+    margin-left: 10rem;
+    column-gap: 2.5rem;
+  }
 }
