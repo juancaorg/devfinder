@@ -224,7 +224,7 @@ input {
   line-height: 1.1875rem;
 }
 
-.main__result--description {
+.main__result--bio {
   font-weight: 400;
   font-size: 0.8125rem;
   line-height: 1.5625rem;
@@ -379,7 +379,7 @@ input {
     line-height: 1.375rem;
   }
 
-  .main__result--description {
+  .main__result--bio {
     font-size: 0.9375rem;
     line-height: 1.5625rem;
     margin-top: 1.5rem;
@@ -440,7 +440,7 @@ input {
     margin-left: 4rem;
   }
 
-  .main__result--description {
+  .main__result--bio {
     margin-top: -2rem;
     margin-left: 10rem;
   }
