@@ -9,6 +9,9 @@ const devName = document.querySelector(".main__result--name");
 const devUsername = document.querySelector(".main__result--username");
 const devJoinDate = document.querySelector(".main__result--date");
 const devDescription = document.querySelector(".main__result--description");
+const devRepos = document.getElementById("main__result--stats-repos");
+const devFollowers = document.getElementById("main__result--stats-followers");
+const devFollowing = document.getElementById("main__result--stats-following");
 const devLocation = document.querySelector(".main__result--data-location>span");
 const devUrl = document.querySelector(".main__result--data-website>a");
 const devTwitter = document.querySelector(".main__result--data-twitter>span");
@@ -24,9 +27,9 @@ function renderUserData(userDataObj) {
     day: "2-digit",
   }).format(new Date(userDataObj.created_at));
   devDescription.textContent = userDataObj.bio;
-  console.log("Repos: " + userDataObj.public_repos);
-  console.log("Followers: " + userDataObj.followers);
-  console.log("Following: " + userDataObj.following);
+  devRepos.textContent = userDataObj.public_repos;
+  devFollowers.textContent = userDataObj.followers;
+  devFollowing.textContent = userDataObj.following;
   devLocation.textContent = userDataObj.location;
   devUrl.textContent = userDataObj.blog;
   devTwitter.textContent = userDataObj.twitter_username;
