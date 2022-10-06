@@ -15,7 +15,7 @@ const devFollowers = document.getElementById("main__result--stats-followers");
 const devFollowing = document.getElementById("main__result--stats-following");
 const devLocation = document.querySelector(".main__result--data-location>span");
 const devWebsite = document.querySelector(".main__result--data-website>a");
-const devTwitter = document.querySelector(".main__result--data-twitter>span");
+const devTwitter = document.querySelector(".main__result--data-twitter>a");
 const devCompany = document.querySelector(".main__result--data-company>span");
 
 // If a GitHub user hasn't added their name,
@@ -68,10 +68,12 @@ function renderWebsite(userDataObj) {
 // "Not Available" with transparency added.
 function renderTwitter(userDataObj) {
   if (userDataObj.twitter_username === null) {
-    devTwitter.textContent = "Not Available";
     devTwitter.style.opacity = 0.5;
+    devTwitter.href = "javascript:void(0)";
+    devTwitter.textContent = "Not Available";
   } else {
-    devTwitter.textContent = userDataObj.twitter_username;
+    devTwitter.href = `https://twitter.com/${userDataObj.twitter_username}`;
+    devTwitter.textContent = `@${userDataObj.twitter_username}`;
   }
 }
 
