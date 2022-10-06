@@ -17,6 +17,9 @@ const devUrl = document.querySelector(".main__result--data-website>a");
 const devTwitter = document.querySelector(".main__result--data-twitter>span");
 const devCompany = document.querySelector(".main__result--data-company>span");
 
+// If a GitHub user hasn't added their name,
+// show their username where the name would be
+// without the '@' symbol.
 function renderName(userDataObj) {
   if (userDataObj.name === null) {
     devName.textContent = userDataObj.login;
