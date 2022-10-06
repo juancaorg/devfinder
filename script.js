@@ -55,9 +55,11 @@ function renderLocation(userDataObj) {
 // "Not Available" with transparency added.
 function renderWebsite(userDataObj) {
   if (userDataObj.blog === "") {
-    devWebsite.textContent = "Not Available";
     devWebsite.style.opacity = 0.5;
+    devWebsite.href = "javascript:void(0)";
+    devWebsite.textContent = "Not Available";
   } else {
+    devWebsite.href = userDataObj.blog;
     devWebsite.textContent = userDataObj.blog;
   }
 }
