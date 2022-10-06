@@ -91,7 +91,7 @@ function renderCompany(userDataObj) {
 // Render user's data in the result card.
 function renderUserData(userDataObj) {
   renderName(userDataObj);
-  devUsername.textContent = "@" + userDataObj.login;
+  devUsername.textContent = `@${userDataObj.login}`;
   devJoinDate.textContent = new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
     month: "short",
