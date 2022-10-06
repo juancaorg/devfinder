@@ -13,7 +13,7 @@ const devRepos = document.getElementById("main__result--stats-repos");
 const devFollowers = document.getElementById("main__result--stats-followers");
 const devFollowing = document.getElementById("main__result--stats-following");
 const devLocation = document.querySelector(".main__result--data-location>span");
-const devUrl = document.querySelector(".main__result--data-website>a");
+const devWebsite = document.querySelector(".main__result--data-website>a");
 const devTwitter = document.querySelector(".main__result--data-twitter>span");
 const devCompany = document.querySelector(".main__result--data-company>span");
 
@@ -39,6 +39,50 @@ function renderBio(userDataObj) {
   }
 }
 
+// If location is empty, show the text
+// "Not Available" with transparency added.
+function renderLocation(userDataObj) {
+  if (userDataObj.location === null) {
+    devLocation.textContent = "Not Available";
+    devLocation.style.opacity = 0.5;
+  } else {
+    devLocation.textContent = userDataObj.location;
+  }
+}
+
+// If website is empty, show the text
+// "Not Available" with transparency added.
+function renderWebsite(userDataObj) {
+  if (userDataObj.blog === "") {
+    devWebsite.textContent = "Not Available";
+    devWebsite.style.opacity = 0.5;
+  } else {
+    devWebsite.textContent = userDataObj.blog;
+  }
+}
+
+// If twitter is empty, show the text
+// "Not Available" with transparency added.
+function renderTwitter(userDataObj) {
+  if (userDataObj.twitter_username === null) {
+    devTwitter.textContent = "Not Available";
+    devTwitter.style.opacity = 0.5;
+  } else {
+    devTwitter.textContent = userDataObj.twitter_username;
+  }
+}
+
+// If company is empty, show the text
+// "Not Available" with transparency added.
+function renderCompany(userDataObj) {
+  if (userDataObj.company === null) {
+    devCompany.textContent = "Not Available";
+    devCompany.style.opacity = 0.5;
+  } else {
+    devCompany.textContent = userDataObj.company;
+  }
+}
+
 // Render user's data in the result card.
 function renderUserData(userDataObj) {
   renderName(userDataObj);
@@ -52,10 +96,10 @@ function renderUserData(userDataObj) {
   devRepos.textContent = userDataObj.public_repos;
   devFollowers.textContent = userDataObj.followers;
   devFollowing.textContent = userDataObj.following;
-  devLocation.textContent = userDataObj.location;
-  devUrl.textContent = userDataObj.blog;
-  devTwitter.textContent = userDataObj.twitter_username;
-  devCompany.textContent = userDataObj.company;
+  renderLocation(userDataObj);
+  renderWebsite(userDataObj);
+  renderTwitter(userDataObj);
+  renderCompany(userDataObj);
 }
 
 // Fetch a user from the GitHub API.
