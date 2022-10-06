@@ -16,7 +16,7 @@ const devFollowing = document.getElementById("main__result--stats-following");
 const devLocation = document.querySelector(".main__result--data-location>span");
 const devWebsite = document.querySelector(".main__result--data-website>a");
 const devTwitter = document.querySelector(".main__result--data-twitter>a");
-const devCompany = document.querySelector(".main__result--data-company>span");
+const devCompany = document.querySelector(".main__result--data-company>a");
 
 // If a GitHub user hasn't added their name,
 // show their username where the name would be
@@ -81,10 +81,19 @@ function renderTwitter(userDataObj) {
 // "Not Available" with transparency added.
 function renderCompany(userDataObj) {
   if (userDataObj.company === null) {
-    devCompany.textContent = "Not Available";
     devCompany.style.opacity = 0.5;
+    devCompany.href = "javascript:void(0)";
+    devCompany.textContent = "Not Available";
   } else {
-    devCompany.textContent = userDataObj.company;
+    if (userDataObj.company[0] === "@") {
+      devCompany.href = `https://github.com/${userDataObj.company
+        .trim()
+        .toLowerCase()
+        .substring(1)}`;
+    } else {
+      devCompany.href = "javascript:void(0)";
+    }
+    devCompany.textContent = userDataObj.company.trim();
   }
 }
 
