@@ -47,7 +47,7 @@ function renderLocation(userDataObj) {
     devLocation.textContent = "Not Available";
     devLocation.style.opacity = 0.5;
   } else {
-    devLocation.textContent = userDataObj.location;
+    devLocation.textContent = userDataObj.location.trim();
   }
 }
 
@@ -59,8 +59,8 @@ function renderWebsite(userDataObj) {
     devWebsite.href = "javascript:void(0)";
     devWebsite.textContent = "Not Available";
   } else {
-    devWebsite.href = userDataObj.blog;
-    devWebsite.textContent = userDataObj.blog;
+    devWebsite.href = userDataObj.blog.trim();
+    devWebsite.textContent = userDataObj.blog.trim();
   }
 }
 
@@ -72,8 +72,8 @@ function renderTwitter(userDataObj) {
     devTwitter.href = "javascript:void(0)";
     devTwitter.textContent = "Not Available";
   } else {
-    devTwitter.href = `https://twitter.com/${userDataObj.twitter_username}`;
-    devTwitter.textContent = `@${userDataObj.twitter_username}`;
+    devTwitter.href = `https://twitter.com/${userDataObj.twitter_username.trim()}`;
+    devTwitter.textContent = `@${userDataObj.twitter_username.trim()}`;
   }
 }
 
