@@ -85,12 +85,17 @@ function renderCompany(userDataObj) {
     devCompany.href = "javascript:void(0)";
     devCompany.textContent = "Not Available";
   } else {
+    // If userDataObj.company starts with an "@" character,
+    // surely the GitHub company site exists.
+    // Link the corresponding URL.
     if (userDataObj.company[0] === "@") {
       devCompany.href = `https://github.com/${userDataObj.company
         .trim()
         .toLowerCase()
         .substring(1)}`;
     } else {
+      // Otherwise, we ignore if it exists or not.
+      // Rather not redirect to an non-existent GitHub site (404).
       devCompany.href = "javascript:void(0)";
     }
     devCompany.textContent = userDataObj.company.trim();
