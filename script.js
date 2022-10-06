@@ -5,6 +5,7 @@
 // https://github.com/Cloud-CV/EvalAI/issues/1373
 
 const API_URL = "https://api.github.com/users/octocat";
+const devPic = document.querySelector(".main__result--pfp");
 const devName = document.querySelector(".main__result--name");
 const devUsername = document.querySelector(".main__result--username");
 const devJoinDate = document.querySelector(".main__result--date");
@@ -100,6 +101,7 @@ function renderUserData(userDataObj) {
   renderWebsite(userDataObj);
   renderTwitter(userDataObj);
   renderCompany(userDataObj);
+  devPic.src = userDataObj.avatar_url;
 }
 
 // Fetch a user from the GitHub API.
