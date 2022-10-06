@@ -8,7 +8,7 @@ const API_URL = "https://api.github.com/users/octocat";
 const devName = document.querySelector(".main__result--name");
 const devUsername = document.querySelector(".main__result--username");
 const devJoinDate = document.querySelector(".main__result--date");
-const devDescription = document.querySelector(".main__result--description");
+const devBio = document.querySelector(".main__result--bio");
 const devRepos = document.getElementById("main__result--stats-repos");
 const devFollowers = document.getElementById("main__result--stats-followers");
 const devFollowing = document.getElementById("main__result--stats-following");
@@ -28,6 +28,17 @@ function renderName(userDataObj) {
   }
 }
 
+// If a GitHub user bio is empty, show the text
+// "This profile has no bio" with transparency added.
+function renderBio(userDataObj) {
+  if (userDataObj.bio === null) {
+    devBio.textContent = "This profile has no bio";
+    devBio.style.opacity = 0.75;
+  } else {
+    devBio.textContent = userDataObj.bio;
+  }
+}
+
 // Render user's data in the result card.
 function renderUserData(userDataObj) {
   renderName(userDataObj);
@@ -37,7 +48,7 @@ function renderUserData(userDataObj) {
     month: "short",
     day: "2-digit",
   }).format(new Date(userDataObj.created_at));
-  devDescription.textContent = userDataObj.bio;
+  renderBio(userDataObj);
   devRepos.textContent = userDataObj.public_repos;
   devFollowers.textContent = userDataObj.followers;
   devFollowing.textContent = userDataObj.following;
