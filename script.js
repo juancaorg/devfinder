@@ -17,9 +17,17 @@ const devUrl = document.querySelector(".main__result--data-website>a");
 const devTwitter = document.querySelector(".main__result--data-twitter>span");
 const devCompany = document.querySelector(".main__result--data-company>span");
 
+function renderName(userDataObj) {
+  if (userDataObj.name === null) {
+    devName.textContent = userDataObj.login;
+  } else {
+    devName.textContent = userDataObj.name;
+  }
+}
+
 // Render user's data in the result card.
 function renderUserData(userDataObj) {
-  devName.textContent = userDataObj.name;
+  renderName(userDataObj);
   devUsername.textContent = "@" + userDataObj.login;
   devJoinDate.textContent = new Intl.DateTimeFormat("en-GB", {
     year: "numeric",
