@@ -4,7 +4,7 @@
 // Credit to @adamstafa's answer in this GH issue:
 // https://github.com/Cloud-CV/EvalAI/issues/1373
 
-const API_URL = "https://api.github.com/users/octocat";
+// To be rendered selectors.
 const devPic = document.querySelector(".main__result--pfp");
 const devName = document.querySelector(".main__result--name");
 const devUsername = document.querySelector(".main__result--username");
@@ -17,6 +17,10 @@ const devLocation = document.querySelector(".main__result--data-location>span");
 const devWebsite = document.querySelector(".main__result--data-website>a");
 const devTwitter = document.querySelector(".main__result--data-twitter>a");
 const devCompany = document.querySelector(".main__result--data-company>a");
+
+// To listen and receive data selectors.
+const searchInput = document.getElementById("main__search--input");
+const searchSubmitButton = document.getElementById("main__search--submit");
 
 // If a GitHub user hasn't added their name,
 // show their username where the name would be
@@ -132,14 +136,14 @@ function renderUserData(userDataObj) {
 }
 
 // Fetch a user from the GitHub API.
-async function fetchUser() {
+async function fetchUser(githubUser) {
   try {
     // The GitHub API may require the headers option
     // for a successful request.
     // Right now it doesn't need, but just in case.
     // Credit:
     // https://stackoverflow.com/questions/39907742/github-api-is-responding-with-a-403-when-using-requests-request-function
-    const response = await fetch(API_URL, {
+    const response = await fetch(`https://api.github.com/users/${githubUser}`, {
       headers: {
         "User-Agent": "request",
       },
@@ -151,5 +155,9 @@ async function fetchUser() {
   }
 }
 
-// On load, fetch a user.
-fetchUser();
+searchSubmitButton.addEventListener("click", () =>
+  fetchUser(searchInput.value)
+);
+
+// On load, fetch @octocat GitHub user.
+fetchUser("octocat");
