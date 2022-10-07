@@ -259,6 +259,8 @@ input {
 
 .main__result--data {
   list-style: none;
+  font-size: 0.8125rem;
+  line-height: 1.1875rem;
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
