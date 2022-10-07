@@ -155,6 +155,17 @@ async function fetchUser(githubUser) {
   }
 }
 
+// Look up for a user and render info after
+// typing your search query when pressing the
+// "enter" button on your keyboard.
+searchInput.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    fetchUser(searchInput.value);
+  }
+});
+
+// Use search query after pressing the search submit
+// button to look up for a user and render info.
 searchSubmitButton.addEventListener("click", () =>
   fetchUser(searchInput.value)
 );
