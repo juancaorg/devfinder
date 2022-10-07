@@ -59,8 +59,17 @@ function renderWebsite(userDataObj) {
     devWebsite.href = "javascript:void(0)";
     devWebsite.textContent = "Not Available";
   } else {
+    // With long website string like
+    // https://www.freecodecamp.org, the card struggles
+    // because of narrow card width and "big" font size.
+    // So, string longer than 19 chars, we trim
+    // the link render and add an ellipsis (...) at the end.
+    if (userDataObj.blog.trim().length > 19) {
+      devWebsite.textContent = userDataObj.blog.trim().slice(0, 16) + "...";
+    } else {
+      devWebsite.textContent = userDataObj.blog.trim();
+    }
     devWebsite.href = userDataObj.blog.trim();
-    devWebsite.textContent = userDataObj.blog.trim();
   }
 }
 
