@@ -63,7 +63,7 @@ function renderWebsite(userDataObj) {
     devWebsite.href = "javascript:void(0)";
     devWebsite.textContent = "Not Available";
   } else {
-    // With long website string like
+    // With a long website string like
     // https://www.freecodecamp.org, the card struggles
     // because of narrow card width and "big" font size.
     // So, string longer than 19 chars, we trim
