@@ -37,9 +37,10 @@ function renderName(userDataObj) {
 // "This profile has no bio" with transparency added.
 function renderBio(userDataObj) {
   if (userDataObj.bio === null) {
-    devBio.textContent = "This profile has no bio";
     devBio.style.opacity = 0.75;
+    devBio.textContent = "This profile has no bio";
   } else {
+    devBio.style.opacity = 1;
     devBio.textContent = userDataObj.bio;
   }
 }
@@ -48,9 +49,10 @@ function renderBio(userDataObj) {
 // "Not Available" with transparency added.
 function renderLocation(userDataObj) {
   if (userDataObj.location === null) {
-    devLocation.textContent = "Not Available";
     devLocation.style.opacity = 0.5;
+    devLocation.textContent = "Not Available";
   } else {
+    devLocation.style.opacity = 1;
     devLocation.textContent = userDataObj.location.trim();
   }
 }
@@ -73,6 +75,7 @@ function renderWebsite(userDataObj) {
     } else {
       devWebsite.textContent = userDataObj.blog.trim();
     }
+    devWebsite.style.opacity = 1;
     devWebsite.href = userDataObj.blog.trim();
   }
 }
@@ -85,6 +88,7 @@ function renderTwitter(userDataObj) {
     devTwitter.href = "javascript:void(0)";
     devTwitter.textContent = "Not Available";
   } else {
+    devTwitter.style.opacity = 1;
     devTwitter.href = `https://twitter.com/${userDataObj.twitter_username.trim()}`;
     devTwitter.textContent = `@${userDataObj.twitter_username.trim()}`;
   }
@@ -111,6 +115,7 @@ function renderCompany(userDataObj) {
       // Rather not redirect to an non-existent GitHub site (404).
       devCompany.href = "javascript:void(0)";
     }
+    devCompany.style.opacity = 1;
     devCompany.textContent = userDataObj.company.trim();
   }
 }
