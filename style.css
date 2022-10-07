@@ -27,7 +27,6 @@
   --attribution-color: hsl(212, 95%, 48%);
 }
 
-
 body {
   min-height: 100vh;
   background-color: var(--background-color);
