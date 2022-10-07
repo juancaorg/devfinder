@@ -153,6 +153,16 @@ input {
   outline: 2px solid var(--accent-color);
 }
 
+#main__search--error {
+  color: #F74646;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.5625rem;
+  position: absolute;
+  top: 18px;
+  right: 100px;
+}
+
 #main__search--submit {
   background-color: var(--accent-color);
   border-radius: 0.625rem;
@@ -288,6 +298,21 @@ input {
   color: var(--attribution-color);
 }
 
+/* * * * */
+/*
+ * Dynamic classes:
+ * to be added or removed with JS.
+*/
+.hidden {
+  display: none;
+}
+
+.error {
+  padding-right: 11.5rem !important;
+}
+
+/* * * * */
+
 @media screen and (prefers-color-scheme: dark) {
   :root {
     --accent-color: hsl(212, 100%, 50%);
@@ -342,6 +367,14 @@ input {
     color: var(--typography-color);
     font-size: 1.125rem;
     padding: 1.375rem 8.5rem 1.375rem 5rem;
+  }
+
+  #main__search--error {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+    position: absolute;
+    top: 24px;
+    right: 132px;
   }
 
   #main__search--submit {
@@ -413,6 +446,17 @@ input {
   .main__result--data li:nth-child(odd) {
     margin-bottom: 1rem;
   }
+
+  /* * * * */
+  /*
+   * Dynamic classes:
+   * to be added or removed with JS.
+  */
+  .error {
+    padding-right: 15rem !important;
+  }
+
+  /* * * * */
 }
 
 @media screen and (min-width: 1270px) {

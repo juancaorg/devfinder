@@ -21,6 +21,7 @@ const devCompany = document.querySelector(".main__result--data-company>a");
 // To listen and receive data selectors.
 const searchInput = document.getElementById("main__search--input");
 const searchSubmitButton = document.getElementById("main__search--submit");
+const errorMessage = document.getElementById("main__search--error");
 
 // If a GitHub user hasn't added their name,
 // show their username where the name would be
@@ -153,6 +154,23 @@ function filterQuery(userQuery) {
   return githubUser;
 }
 
+// Display error message if user is not found.
+function displayErrorMessage() {
+  // Display 'No results' messages in search box.
+  errorMessage.classList.remove("hidden");
+  // 'Hide' (increase search box padding-left)
+  // temporarily the search query if it's too long.
+  searchInput.classList.add("error");
+}
+
+// Clear error message if there's any.
+function clearErrorMessage() {
+  // Hide 'No results' messages in search box.
+  errorMessage.classList.add("hidden");
+  // Display the search query again.
+  searchInput.classList.remove("error");
+}
+
 // Fetch a user from the GitHub API.
 async function fetchUser(userQuery) {
   try {
@@ -168,11 +186,23 @@ async function fetchUser(userQuery) {
       },
     });
     const userDataObj = await response.json();
-    renderUserData(userDataObj);
+    const userStatus = response.status;
+    if (userStatus === 404) {
+      displayErrorMessage();
+    } else {
+      clearErrorMessage();
+      renderUserData(userDataObj);
+    }
   } catch (error) {
     console.log(error);
   }
 }
+
+// Check if any key is pressed (including backspace)
+// to clear error message.
+searchInput.addEventListener("keydown", () => {
+  clearErrorMessage();
+});
 
 // Look up for a user and render info after
 // typing your search query when pressing the
