@@ -141,18 +141,28 @@ function renderUserData(userDataObj) {
 }
 
 // Fetch a user from the GitHub API.
-async function fetchUser(githubUser) {
+async function fetchUser(userQuery) {
   try {
+    let filteredQuery = "";
+    const trimmedQuery = userQuery.trim();
+    if (trimmedQuery[0] === "@") {
+      filteredQuery = trimmedQuery.toLowerCase().substring(1);
+    } else {
+      filteredQuery = trimmedQuery.trim().toLowerCase();
+    }
     // The GitHub API may require the headers option
     // for a successful request.
     // Right now it doesn't need, but just in case.
     // Credit:
     // https://stackoverflow.com/questions/39907742/github-api-is-responding-with-a-403-when-using-requests-request-function
-    const response = await fetch(`https://api.github.com/users/${githubUser}`, {
-      headers: {
-        "User-Agent": "request",
-      },
-    });
+    const response = await fetch(
+      `https://api.github.com/users/${filteredQuery}`,
+      {
+        headers: {
+          "User-Agent": "request",
+        },
+      }
+    );
     const userDataObj = await response.json();
     renderUserData(userDataObj);
   } catch (error) {
