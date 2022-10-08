@@ -65,7 +65,7 @@ input {
 .header {
   max-width: 327px;
   display: flex;
-  column-gap: 7.5rem;
+  column-gap: 7rem;
 }
 
 .header__logo {
@@ -95,6 +95,11 @@ input {
 .header__theme:hover {
   cursor: pointer;
   filter: var(--theme-hover-filter-color);
+}
+
+.header__theme>img {
+  width: 1.25rem;
+  filter: var(--icon-filter-color);
 }
 
 .main {
@@ -344,7 +349,7 @@ input {
 @media screen and (min-width: 768px) {
   .header {
     max-width: 573px;
-    column-gap: 22.9375rem;
+    column-gap: 22rem;
   }
 
   .main {
