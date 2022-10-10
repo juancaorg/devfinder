@@ -1,4 +1,4 @@
-// NOTE: Unauthorized users (user is determined by his IP)
+// NOTE: Unauthorized users (user is determined by IP)
 // can make up to 60 requests per hour, give or take.
 // Keep this in mind when fetching data from the GH API.
 // Credit to @adamstafa's answer in this GH issue:
