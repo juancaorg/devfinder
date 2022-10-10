@@ -317,33 +317,34 @@ input {
 
 /* * * * */
 
-@media screen and (prefers-color-scheme: dark) {
-  :root {
-    --accent-color: hsl(212, 100%, 50%);
-    --accent-active-color: hsl(212, 100%, 69%);
-    --theme-hover-filter-color: invert(43%) sepia(46%) saturate(518%) hue-rotate(178deg) brightness(82%) contrast(88%);
-    --typography-color: hsl(0, 0%, 100%);
-    --icon-color: hsl(0, 0%, 100%);
-    /* Convert --icon-color to --icon-filter-color. */
-    --icon-filter-color: brightness(0) invert(1);
-    --bold-typography-color: hsl(0, 0%, 100%);
-    --background-color: hsl(220, 40%, 13%);
-    --card-background-color: hsl(222, 41%, 20%);
-    --link-color: hsl(0, 0%, 100%);
-    --attribution-color: hsl(212, 95%, 48%);
-  }
+/* 
+ * Manual dark mode.
+*/
+:root.dark {
+  --accent-color: hsl(212, 100%, 50%);
+  --accent-active-color: hsl(212, 100%, 69%);
+  --theme-hover-filter-color: invert(43%) sepia(46%) saturate(518%) hue-rotate(178deg) brightness(82%) contrast(88%);
+  --typography-color: hsl(0, 0%, 100%);
+  --icon-color: hsl(0, 0%, 100%);
+  /* Convert --icon-color to --icon-filter-color. */
+  --icon-filter-color: brightness(0) invert(1);
+  --bold-typography-color: hsl(0, 0%, 100%);
+  --background-color: hsl(220, 40%, 13%);
+  --card-background-color: hsl(222, 41%, 20%);
+  --link-color: hsl(0, 0%, 100%);
+  --attribution-color: hsl(212, 95%, 48%);
+}
 
-  .header__theme {
-    filter: var(--icon-filter-color);
-  }
+.header__theme.dark {
+  filter: var(--icon-filter-color);
+}
 
-  #main__search--input {
-    box-shadow: unset;
-  }
+#main__search--input.dark {
+  box-shadow: unset;
+}
 
-  .main__result {
-    box-shadow: unset;
-  }
+.main__result.dark {
+  box-shadow: unset;
 }
 
 @media screen and (min-width: 768px) {

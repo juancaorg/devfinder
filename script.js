@@ -23,6 +23,59 @@ const searchInput = document.getElementById("main__search--input");
 const searchSubmitButton = document.getElementById("main__search--submit");
 const errorMessage = document.getElementById("main__search--error");
 
+// Light / Dark mode buttons and variables.
+const toggleButtons = document.querySelectorAll(".header__theme");
+const darkModeButton = toggleButtons[0];
+const lightModeButton = toggleButtons[1];
+const rootElement = document.querySelector(":root");
+const headerElement = document.querySelector(".header__theme");
+const mainResult = document.querySelector(".main__result");
+// Boolean if already set in the browser, otherwise null.
+const localPreference = JSON.parse(localStorage.getItem("dark-theme"));
+// Boolean, check OS dark mode.
+const defaultDarkMode = window.matchMedia(
+  "(prefers-color-scheme: dark)"
+).matches;
+// The nullish coalescing operator (??) is a logical
+// operator that returns its right-hand side operand
+// when its left-hand side operand is null or undefined,
+// and otherwise returns its left-hand side operand.
+// boolean; if this evaluates to true, darkMode should be turned on.
+let isDarkMode = localPreference ?? defaultDarkMode;
+
+function handleDarkmode(isDark) {
+  if (isDark) {
+    rootElement.classList.add("dark");
+    headerElement.classList.add("dark");
+    searchInput.classList.add("dark");
+    mainResult.classList.add("dark");
+    darkModeButton.classList.add("hidden");
+    lightModeButton.classList.remove("hidden");
+    localStorage.setItem("dark-theme", true);
+  } else {
+    rootElement.classList.remove("dark");
+    headerElement.classList.remove("dark");
+    searchInput.classList.remove("dark");
+    mainResult.classList.remove("dark");
+    lightModeButton.classList.add("hidden");
+    darkModeButton.classList.remove("hidden");
+    localStorage.setItem("dark-theme", false);
+  }
+}
+
+// Dark mode toggle.
+darkModeButton.addEventListener("click", () => {
+  handleDarkmode(true);
+});
+
+// Light mode toggle.
+lightModeButton.addEventListener("click", () => {
+  handleDarkmode(false);
+});
+
+// On first run, detect OS light/dark preference.
+handleDarkmode(isDarkMode);
+
 // If a GitHub user hasn't added their name,
 // show their username where the name would be
 // without the '@' symbol.
