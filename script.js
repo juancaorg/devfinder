@@ -73,9 +73,6 @@ lightModeButton.addEventListener("click", () => {
   handleDarkmode(false);
 });
 
-// On first run, detect OS light/dark preference.
-handleDarkmode(isDarkMode);
-
 // If a GitHub user hasn't added their name,
 // show their username where the name would be
 // without the '@' symbol.
@@ -271,6 +268,9 @@ searchInput.addEventListener("keypress", (event) => {
 searchSubmitButton.addEventListener("click", () =>
   fetchUser(searchInput.value)
 );
+
+// On first load, detect OS's light/dark preference.
+handleDarkmode(isDarkMode);
 
 // On load, fetch @octocat GitHub user.
 fetchUser("octocat");
