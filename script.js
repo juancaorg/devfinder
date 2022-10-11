@@ -128,6 +128,10 @@ function renderWebsite(userDataObj) {
     }
     devWebsite.style.opacity = 1;
     devWebsite.href = userDataObj.blog.trim();
+    // Add 'https' redirect if the original URL didn't have it.
+    if (devWebsite.protocol !== "https:") {
+      devWebsite.href = `https://${userDataObj.blog.trim()}`;
+    }
   }
 }
 
