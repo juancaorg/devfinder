@@ -220,6 +220,7 @@ Other stuff that should be fixed later:
 - [KeyboardEvent.keyCode deprecated. What does this mean in practice?](https://stackoverflow.com/questions/35394937/keyboardevent-keycode-deprecated-what-does-this-mean-in-practice).
 - [Dark mode switch with prefers-color-scheme: dark](https://stackoverflow.com/questions/61899858/dark-mode-switch-with-prefers-color-scheme-dark#61900120).
 - [How to override css prefers-color-scheme setting](https://stackoverflow.com/questions/56300132/how-to-override-css-prefers-color-scheme-setting)
+- [Detect HTTP or HTTPS then force HTTPS in JavaScript](https://stackoverflow.com/questions/4723213/detect-http-or-https-then-force-https-in-javascript)
 
 ## Author
 
