@@ -241,14 +241,14 @@ async function fetchUser(userQuery) {
     });
     const userDataObj = await response.json();
     const userStatus = response.status;
-    if (userStatus === 404) {
-      displayErrorMessage();
-    } else {
+    if (userStatus !== 404) {
       clearErrorMessage();
       renderUserData(userDataObj);
+    } else {
+      displayErrorMessage();
     }
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 }
 
