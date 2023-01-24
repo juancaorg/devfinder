@@ -261,7 +261,7 @@ searchInput.addEventListener("keydown", () => {
 // Look up for a user and render info after
 // typing your search query when pressing the
 // "enter" button on your keyboard.
-searchInput.addEventListener("keypress", (event) => {
+searchInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     fetchUser(searchInput.value);
   }
