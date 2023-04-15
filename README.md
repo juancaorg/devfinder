@@ -52,7 +52,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://github.com/juancaorg/github-user-search)
+- Solution URL: [GitHub Repository](https://github.com/juancaorg/devfinder)
 - Live Site URL: [devfinder.juanca.dev](https://devfinder.juanca.dev/)
 
 ## My process
